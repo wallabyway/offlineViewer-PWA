@@ -1,6 +1,7 @@
 # offlineViewer-PWA
 offline Forge Viewer demonstrating PWA ServiceWorkers
 
+LIVE DEMO: https://wallabyway.github.io/offlineViewer-PWA
 
 Web Client:
 All browser code can be found under 'docs' folder, starting with the index.html file
