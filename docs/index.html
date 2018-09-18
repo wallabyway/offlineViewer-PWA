@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Offline Demo</title>
+	    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no" />
+	    <link rel="shortcut icon" href="#" />
+	    <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.min.css?v=v6.1" type="text/css">
+	    <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.js?v=v6.1"></script>
+	    <script src="./js/init.js"></script>
+	    <style> h2 {font-family:arial; position:absolute; margin:20px; color:darkblue; z-index:1;}</style>
+
+	</head>
+    <body onload="initializeViewer();" style="margin:0">
+	    <div id="forgeViewer" ></div>
+	    <h2> Offline Demo </h2>
+	</body>
+
+	<script>
+		var viewerApp;
+
+	    function initializeViewer() {
+
+			function onLoadSuccess() {
+			  var viewables = viewerApp.bubble.search({ 'type': 'geometry' });
+			  if (viewables.length > 0)
+			  	viewerApp.selectItem(viewables[0].data);
+			};
+
+			function onInitialized() {
+				viewerApp = new Autodesk.Viewing.ViewingApplication('forgeViewer');
+				viewerApp.registerViewer( viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D );
+				viewerApp.loadDocument( options.urn, onLoadSuccess);
+			};
+
+			Autodesk.Viewing.Initializer( options, onInitialized);
+		}
+	</script>
+</html>
