@@ -1,7 +1,6 @@
 const fetch = require('node-fetch');
 const Zip = require('node-zip');
 const Zlib = require('zlib');
-const fs = require('fs');
 
 let access_token = "";
 
