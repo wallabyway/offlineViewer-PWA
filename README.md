@@ -12,3 +12,14 @@ All server code can be found under 'server' folder.  Then demo uses a lambda fun
 
 
 refer to https://github.com/wallabyway/viewer-serverless
+
+
+
+SRC: https://github.com/MichaelPonti/pwaforgedevcon2018
+
+DEMO: https://michaelponti.github.io/pwaforgedevcon2018/
+
+
+### Does service worker run in the background even if browser is closed ?...
+
+https://stackoverflow.com/questions/39201067/does-service-worker-runs-on-background-even-if-browser-is-closed
